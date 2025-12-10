@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c462g8slu6rlr"]
+
+[ext_resource type="FontFile" uid="uid://ddo2pvttx80wr" path="res://Assets/Fonts/Dunkin.otf" id="1_btryx"]
+
+[resource]
+font = ExtResource("1_btryx")
+font_size = 150
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtyuqk6w41g1t"]
+
+[ext_resource type="Texture2D" uid="uid://dblgah4ur4dml" path="res://Assets/close_ups/sign_1_screw.png" id="1_hstv1"]
+[ext_resource type="Script" uid="uid://m8045ea81mc4" path="res://Scenes/InteractWindows/Wall3/StorageScrew.gd" id="2_5lf7h"]
+[ext_resource type="AudioStream" uid="uid://kg77g5avraav" path="res://Assets/Sounds/mouseclick.wav" id="3_spuf5"]
+
+[node name="StorageScrew" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_hstv1")
+script = ExtResource("2_5lf7h")
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_spuf5")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

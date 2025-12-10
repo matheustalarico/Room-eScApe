@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://bj8f2woqdjpt2"]
+
+[ext_resource type="PackedScene" uid="uid://dec123w1cgntr" path="res://Scenes/InteractWindows/InteractWindow.tscn" id="1_dv2jo"]
+[ext_resource type="Texture2D" uid="uid://bfullu5313plm" path="res://Assets/close_ups/note_close.png" id="2_biykw"]
+[ext_resource type="LabelSettings" uid="uid://dib7xttt8jvt6" path="res://Resources/30black.tres" id="3_5yiwq"]
+[ext_resource type="LabelSettings" uid="uid://bovcvaru015ot" path="res://Resources/20black.tres" id="4_hgew3"]
+
+[node name="NoteWindow" instance=ExtResource("1_dv2jo")]
+
+[node name="TextureRect" parent="." index="0"]
+texture = ExtResource("2_biykw")
+
+[node name="Label" type="Label" parent="." index="2"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 566.0
+offset_right = 474.0
+offset_bottom = 612.0
+text = "ano/mês = x"
+label_settings = ExtResource("3_5yiwq")
+
+[node name="Label2" type="Label" parent="." index="3"]
+layout_mode = 0
+offset_left = 611.0
+offset_top = 565.0
+offset_right = 845.0
+offset_bottom = 611.0
+text = "x - dia = y"
+label_settings = ExtResource("3_5yiwq")
+
+[node name="Label3" type="Label" parent="." index="4"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 620.0
+offset_right = 830.0
+offset_bottom = 666.0
+text = "algarismos de y somados = \"e\""
+label_settings = ExtResource("3_5yiwq")
+
+[node name="Label4" type="Label" parent="." index="5"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 353.0
+offset_right = 830.0
+offset_bottom = 399.0
+text = "número -> m"
+label_settings = ExtResource("3_5yiwq")
+
+[node name="Label5" type="Label" parent="." index="6"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 419.0
+offset_right = 830.0
+offset_bottom = 465.0
+text = "m  = c (mod n)
+c  = m (mod n)"
+label_settings = ExtResource("3_5yiwq")
+
+[node name="Label6" type="Label" parent="." index="7"]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 414.0
+offset_right = 859.0
+offset_bottom = 460.0
+text = "e"
+label_settings = ExtResource("4_hgew3")
+
+[node name="Label7" type="Label" parent="." index="8"]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 456.0
+offset_right = 853.0
+offset_bottom = 502.0
+text = "d"
+label_settings = ExtResource("4_hgew3")
+
+[node name="Label9" type="Label" parent="." index="9"]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 700.0
+offset_right = 828.0
+offset_bottom = 792.0
+text = "Utilize m a partir dos números
+dentro do armário!"
+label_settings = ExtResource("3_5yiwq")
+horizontal_alignment = 1

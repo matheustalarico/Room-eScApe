@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://c27sesggr3qxr"]
+
+[ext_resource type="PackedScene" uid="uid://kta32xxl83pv" path="res://Scenes/Walls/WallBase.tscn" id="1_1gyni"]
+[ext_resource type="Script" uid="uid://cj6uiqs47l4y6" path="res://Scenes/Walls/Wall3/Wall3.gd" id="2_8j4mo"]
+[ext_resource type="PackedScene" uid="uid://bj8f2woqdjpt2" path="res://Scenes/InteractWindows/Wall3/NoteWindow.tscn" id="3_r6rmm"]
+[ext_resource type="Texture2D" uid="uid://cv1fu15rsf4mc" path="res://Assets/wall_3/note.png" id="3_vwvgx"]
+[ext_resource type="Texture2D" uid="uid://cj7w62p6pbcyg" path="res://Assets/wall_3/safe_closed.png" id="4_0u1rl"]
+[ext_resource type="PackedScene" uid="uid://bawmlhljl7bin" path="res://Scenes/InteractWindows/Wall3/StorageClosedWindow.tscn" id="4_1b07t"]
+[ext_resource type="PackedScene" uid="uid://ctavmldeu5x7h" path="res://Scenes/InteractWindows/Wall3/SafeWindow.tscn" id="5_6yyur"]
+[ext_resource type="Texture2D" uid="uid://gq3ysi8eybr6" path="res://Assets/wall_3/storage_thing_closed.png" id="5_hq3uo"]
+[ext_resource type="Texture2D" uid="uid://b1rmmfpkgh84i" path="res://Assets/wall_3/safe_open.png" id="5_jfdl5"]
+[ext_resource type="Texture2D" uid="uid://taao4n8g21ew" path="res://Assets/wall_3/storage_thing_open.png" id="6_jfdl5"]
+[ext_resource type="PackedScene" uid="uid://behg5moh0e0ow" path="res://Scenes/InteractWindows/Wall3/StorageOpenWindow.tscn" id="11_1b07t"]
+
+[node name="Wall3" instance=ExtResource("1_1gyni")]
+script = ExtResource("2_8j4mo")
+wall_number = 3
+
+[node name="Note" type="TextureButton" parent="." index="3"]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 510.0
+offset_right = 591.0
+offset_bottom = 616.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_vwvgx")
+
+[node name="Safe" type="TextureButton" parent="." index="4"]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 738.0
+offset_right = 677.0
+offset_bottom = 898.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_0u1rl")
+
+[node name="SafeOpen" type="TextureRect" parent="Safe" index="0"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("5_jfdl5")
+
+[node name="Storage" type="TextureButton" parent="." index="5"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 62.0
+offset_right = 714.0
+offset_bottom = 371.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_hq3uo")
+
+[node name="StorageOpen" type="TextureRect" parent="Storage" index="0"]
+visible = false
+layout_mode = 0
+offset_left = -166.0
+offset_right = 513.0
+offset_bottom = 309.0
+mouse_filter = 2
+texture = ExtResource("6_jfdl5")
+
+[node name="NoteWindow" parent="Windows" index="0" instance=ExtResource("3_r6rmm")]
+visible = false
+layout_mode = 1
+
+[node name="StorageClosedWindow" parent="Windows" index="1" instance=ExtResource("4_1b07t")]
+visible = false
+layout_mode = 1
+
+[node name="SafeWindow" parent="Windows" index="2" instance=ExtResource("5_6yyur")]
+visible = false
+layout_mode = 1
+
+[node name="StorageOpenWindow" parent="Windows" index="3" instance=ExtResource("11_1b07t")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="Note" to="." method="_on_note_pressed"]
+[connection signal="pressed" from="Safe" to="." method="_on_safe_pressed"]
+[connection signal="pressed" from="Storage" to="." method="_on_storage_pressed"]

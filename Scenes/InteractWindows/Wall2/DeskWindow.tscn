@@ -1,0 +1,427 @@
+[gd_scene load_steps=10 format=3 uid="uid://ct332solud0j6"]
+
+[ext_resource type="PackedScene" uid="uid://dec123w1cgntr" path="res://Scenes/InteractWindows/InteractWindow.tscn" id="1_m72ln"]
+[ext_resource type="Script" uid="uid://c6gvuqet2c4u2" path="res://Scenes/InteractWindows/Wall2/DeskWindow.gd" id="2_3ymrt"]
+[ext_resource type="Texture2D" uid="uid://b35ansaw3ku27" path="res://Assets/close_ups/calendar.png" id="3_111aa"]
+[ext_resource type="LabelSettings" uid="uid://3wwuas2vl54n" path="res://Resources/50black.tres" id="4_fgup3"]
+[ext_resource type="FontFile" uid="uid://ddo2pvttx80wr" path="res://Assets/Fonts/Dunkin.otf" id="5_4uyj0"]
+[ext_resource type="Texture2D" uid="uid://w1w6j110h3vl" path="res://Assets/arrow.png" id="6_kwgj7"]
+[ext_resource type="Texture2D" uid="uid://b6byy6abs7dmg" path="res://Assets/close_ups/drawer_closed.png" id="7_fqe16"]
+[ext_resource type="PackedScene" uid="uid://kyqu8oefjbhd" path="res://Scenes/InteractWindows/Wall2/DrawerNoteWindow.tscn" id="8_111aa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sx1jr"]
+font = ExtResource("5_4uyj0")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[node name="DeskWindow" instance=ExtResource("1_m72ln")]
+script = ExtResource("2_3ymrt")
+
+[node name="TextureRect" parent="." index="0"]
+anchors_preset = 10
+anchor_bottom = 0.0
+offset_bottom = 448.0
+grow_vertical = 1
+texture = ExtResource("3_111aa")
+
+[node name="Year" type="Label" parent="TextureRect" index="0"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 135.0
+offset_right = 728.0
+offset_bottom = 212.0
+text = "2004 / DEZ"
+label_settings = ExtResource("4_fgup3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CalendarWeeks" type="Control" parent="TextureRect" index="1"]
+anchors_preset = 0
+offset_left = 353.0
+offset_top = 225.0
+offset_right = 426.0
+offset_bottom = 265.0
+
+[node name="Week1" type="Control" parent="TextureRect/CalendarWeeks" index="0"]
+anchors_preset = 0
+
+[node name="Label1" type="Label" parent="TextureRect/CalendarWeeks/Week1" index="0"]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 31.0
+text = "S1"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label2" type="Label" parent="TextureRect/CalendarWeeks/Week1" index="1"]
+layout_mode = 0
+offset_left = 218.0
+offset_right = 226.0
+offset_bottom = 31.0
+text = "1"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label3" type="Label" parent="TextureRect/CalendarWeeks/Week1" index="2"]
+layout_mode = 0
+offset_left = 271.0
+offset_right = 285.0
+offset_bottom = 31.0
+text = "2"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label4" type="Label" parent="TextureRect/CalendarWeeks/Week1" index="3"]
+layout_mode = 0
+offset_left = 326.0
+offset_right = 340.0
+offset_bottom = 31.0
+text = "3"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label5" type="Label" parent="TextureRect/CalendarWeeks/Week1" index="4"]
+layout_mode = 0
+offset_left = 379.0
+offset_right = 393.0
+offset_bottom = 31.0
+text = "4"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Week2" type="Control" parent="TextureRect/CalendarWeeks" index="1"]
+anchors_preset = 0
+offset_top = 37.0
+offset_bottom = 37.0
+
+[node name="Label1" type="Label" parent="TextureRect/CalendarWeeks/Week2" index="0"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 23.0
+offset_bottom = 31.0
+text = "S2"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label2" type="Label" parent="TextureRect/CalendarWeeks/Week2" index="1"]
+layout_mode = 0
+offset_left = 56.0
+offset_right = 64.0
+offset_bottom = 31.0
+text = "5"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label3" type="Label" parent="TextureRect/CalendarWeeks/Week2" index="2"]
+layout_mode = 0
+offset_left = 107.0
+offset_right = 121.0
+offset_bottom = 31.0
+text = "6"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label4" type="Label" parent="TextureRect/CalendarWeeks/Week2" index="3"]
+layout_mode = 0
+offset_left = 162.0
+offset_right = 176.0
+offset_bottom = 31.0
+text = "7"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label5" type="Label" parent="TextureRect/CalendarWeeks/Week2" index="4"]
+layout_mode = 0
+offset_left = 217.0
+offset_right = 231.0
+offset_bottom = 31.0
+text = "8"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label6" type="Label" parent="TextureRect/CalendarWeeks/Week2" index="5"]
+layout_mode = 0
+offset_left = 272.0
+offset_right = 286.0
+offset_bottom = 31.0
+text = "9"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label7" type="Label" parent="TextureRect/CalendarWeeks/Week2" index="6"]
+layout_mode = 0
+offset_left = 319.0
+offset_right = 345.0
+offset_bottom = 31.0
+text = "10"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label8" type="Label" parent="TextureRect/CalendarWeeks/Week2" index="7"]
+layout_mode = 0
+offset_left = 376.0
+offset_right = 402.0
+offset_bottom = 31.0
+text = "11"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Week3" type="Control" parent="TextureRect/CalendarWeeks" index="2"]
+anchors_preset = 0
+offset_top = 75.0
+offset_bottom = 75.0
+
+[node name="Label1" type="Label" parent="TextureRect/CalendarWeeks/Week3" index="0"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 23.0
+offset_bottom = 31.0
+text = "S3"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label2" type="Label" parent="TextureRect/CalendarWeeks/Week3" index="1"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = -1.0
+offset_right = 72.0
+offset_bottom = 30.0
+text = "12"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label3" type="Label" parent="TextureRect/CalendarWeeks/Week3" index="2"]
+layout_mode = 0
+offset_left = 103.0
+offset_right = 124.0
+offset_bottom = 31.0
+text = "13"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label4" type="Label" parent="TextureRect/CalendarWeeks/Week3" index="3"]
+layout_mode = 0
+offset_left = 158.0
+offset_top = -1.0
+offset_right = 180.0
+offset_bottom = 30.0
+text = "14"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label5" type="Label" parent="TextureRect/CalendarWeeks/Week3" index="4"]
+layout_mode = 0
+offset_left = 213.0
+offset_right = 234.0
+offset_bottom = 31.0
+text = "15"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label6" type="Label" parent="TextureRect/CalendarWeeks/Week3" index="5"]
+layout_mode = 0
+offset_left = 268.0
+offset_top = -1.0
+offset_right = 290.0
+offset_bottom = 30.0
+text = "16"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label7" type="Label" parent="TextureRect/CalendarWeeks/Week3" index="6"]
+layout_mode = 0
+offset_left = 321.0
+offset_right = 347.0
+offset_bottom = 31.0
+text = "17"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label8" type="Label" parent="TextureRect/CalendarWeeks/Week3" index="7"]
+layout_mode = 0
+offset_left = 375.0
+offset_right = 401.0
+offset_bottom = 31.0
+text = "18"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Week4" type="Control" parent="TextureRect/CalendarWeeks" index="3"]
+anchors_preset = 0
+offset_top = 113.0
+offset_bottom = 113.0
+
+[node name="Label1" type="Label" parent="TextureRect/CalendarWeeks/Week4" index="0"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 23.0
+offset_bottom = 31.0
+text = "S4"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label2" type="Label" parent="TextureRect/CalendarWeeks/Week4" index="1"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = -1.0
+offset_right = 72.0
+offset_bottom = 30.0
+text = "19"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label3" type="Label" parent="TextureRect/CalendarWeeks/Week4" index="2"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = -1.0
+offset_right = 129.0
+offset_bottom = 30.0
+text = "20"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label4" type="Label" parent="TextureRect/CalendarWeeks/Week4" index="3"]
+layout_mode = 0
+offset_left = 158.0
+offset_top = -1.0
+offset_right = 180.0
+offset_bottom = 30.0
+text = "21"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label5" type="Label" parent="TextureRect/CalendarWeeks/Week4" index="4"]
+layout_mode = 0
+offset_left = 210.0
+offset_right = 237.0
+offset_bottom = 31.0
+text = "22"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label6" type="Label" parent="TextureRect/CalendarWeeks/Week4" index="5"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = -1.0
+offset_right = 291.0
+offset_bottom = 30.0
+text = "23"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label7" type="Label" parent="TextureRect/CalendarWeeks/Week4" index="6"]
+layout_mode = 0
+offset_left = 318.0
+offset_top = -1.0
+offset_right = 345.0
+offset_bottom = 30.0
+text = "24"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/CalendarWeeks/Week4" index="7"]
+layout_mode = 0
+offset_left = 362.0
+offset_top = -7.0
+offset_right = 862.0
+offset_bottom = 493.0
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("6_kwgj7")
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/CalendarWeeks/Week4/TextureRect" index="0"]
+layout_mode = 0
+offset_left = 111.111115
+offset_top = 88.88889
+offset_right = 151.11111
+offset_bottom = 128.88889
+scale = Vector2(6.777886, 7.6666665)
+
+[node name="Label8" type="Label" parent="TextureRect/CalendarWeeks/Week4" index="8"]
+layout_mode = 0
+offset_left = 372.0
+offset_top = -1.0
+offset_right = 398.0
+offset_bottom = 30.0
+text = "25"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Week5" type="Control" parent="TextureRect/CalendarWeeks" index="4"]
+anchors_preset = 0
+offset_top = 148.0
+offset_bottom = 148.0
+
+[node name="Label1" type="Label" parent="TextureRect/CalendarWeeks/Week5" index="0"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 23.0
+offset_bottom = 31.0
+text = "S5"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label2" type="Label" parent="TextureRect/CalendarWeeks/Week5" index="1"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = -1.0
+offset_right = 75.0
+offset_bottom = 30.0
+text = "26"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label3" type="Label" parent="TextureRect/CalendarWeeks/Week5" index="2"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = -1.0
+offset_right = 132.0
+offset_bottom = 30.0
+text = "27"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label4" type="Label" parent="TextureRect/CalendarWeeks/Week5" index="3"]
+layout_mode = 0
+offset_left = 157.0
+offset_right = 183.0
+offset_bottom = 31.0
+text = "28"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label5" type="Label" parent="TextureRect/CalendarWeeks/Week5" index="4"]
+layout_mode = 0
+offset_left = 210.0
+offset_right = 237.0
+offset_bottom = 31.0
+text = "29"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label6" type="Label" parent="TextureRect/CalendarWeeks/Week5" index="5"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = -1.0
+offset_right = 291.0
+offset_bottom = 30.0
+text = "30"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="Label7" type="Label" parent="TextureRect/CalendarWeeks/Week5" index="6"]
+layout_mode = 0
+offset_left = 318.0
+offset_top = -1.0
+offset_right = 345.0
+offset_bottom = 30.0
+text = "31"
+label_settings = SubResource("LabelSettings_sx1jr")
+
+[node name="DrawerTexture" type="TextureRect" parent="." index="2"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -637.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 0
+texture = ExtResource("7_fqe16")
+
+[node name="DrawerTriggerClosed" type="TextureButton" parent="DrawerTexture" index="0"]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 121.0
+offset_right = 880.0
+offset_bottom = 391.0
+mouse_default_cursor_shape = 2
+
+[node name="DrawerTriggerOpen" type="TextureButton" parent="DrawerTexture" index="1"]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 107.0
+offset_right = 937.0
+offset_bottom = 424.0
+mouse_default_cursor_shape = 2
+
+[node name="NoteTrigger" type="TextureButton" parent="DrawerTexture" index="2"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 29.0
+offset_right = 767.0
+offset_bottom = 106.0
+mouse_default_cursor_shape = 2
+
+[node name="DrawerNoteWindow" parent="." index="3" instance=ExtResource("8_111aa")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="DrawerTexture/DrawerTriggerClosed" to="." method="_on_drawer_trigger_closed_pressed"]
+[connection signal="pressed" from="DrawerTexture/DrawerTriggerOpen" to="." method="_on_drawer_trigger_open_pressed"]
+[connection signal="pressed" from="DrawerTexture/NoteTrigger" to="." method="_on_note_trigger_pressed"]

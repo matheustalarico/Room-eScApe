@@ -1,0 +1,93 @@
+[gd_scene load_steps=8 format=3 uid="uid://cor7ab8s5e8wi"]
+
+[ext_resource type="PackedScene" uid="uid://dec123w1cgntr" path="res://Scenes/InteractWindows/InteractWindow.tscn" id="1_fv0jk"]
+[ext_resource type="Script" uid="uid://8c1sficice5s" path="res://Scenes/InteractWindows/Wall1/SignWindow.gd" id="2_i2i3u"]
+[ext_resource type="Texture2D" uid="uid://csdosjuw1xwwa" path="res://Assets/close_ups/sign_1.png" id="2_pfwi1"]
+[ext_resource type="PackedScene" uid="uid://bvtmdqr8iqr7u" path="res://Scenes/InteractWindows/Wall1/Screws/Screw.tscn" id="3_pfwi1"]
+[ext_resource type="LabelSettings" uid="uid://3wwuas2vl54n" path="res://Resources/50black.tres" id="4_r5ai3"]
+[ext_resource type="LabelSettings" uid="uid://bovcvaru015ot" path="res://Resources/20black.tres" id="5_rtril"]
+[ext_resource type="PackedScene" uid="uid://cpgbt48icyapx" path="res://Scenes/InteractWindows/Wall1/SignCoder.tscn" id="5_tvmd0"]
+
+[node name="SignWindow" instance=ExtResource("1_fv0jk")]
+script = ExtResource("2_i2i3u")
+
+[node name="TextureRect" parent="." index="0"]
+texture = ExtResource("2_pfwi1")
+
+[node name="Text" type="VBoxContainer" parent="." index="1"]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 331.0
+offset_right = 935.0
+offset_bottom = 716.0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Title" type="Label" parent="Text" index="0"]
+layout_mode = 2
+text = "RSA"
+label_settings = ExtResource("4_r5ai3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text1" type="Label" parent="Text" index="1"]
+layout_mode = 2
+text = "Um dos primeiros sistemas de criptografia de chave pública
+e é amplamente utilizado para transmissão segura de dados."
+label_settings = ExtResource("5_rtril")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text2" type="Label" parent="Text" index="2"]
+layout_mode = 2
+text = "Neste sistema de criptografia, a chave de encriptação é
+pública e é diferente da chave de decriptação
+que é secreta (privada)."
+label_settings = ExtResource("5_rtril")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text3" type="Label" parent="Text" index="3"]
+layout_mode = 2
+text = "Esta diferença é fundada na dificuldade de fatorização do
+produto de dois números primos enormes."
+label_settings = ExtResource("5_rtril")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Screws" type="Control" parent="." index="3"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Screw" parent="Screws" index="0" instance=ExtResource("3_pfwi1")]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 322.0
+offset_right = 144.0
+offset_bottom = 362.0
+
+[node name="Screw2" parent="Screws" index="1" instance=ExtResource("3_pfwi1")]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 715.0
+offset_right = 144.0
+offset_bottom = 755.0
+
+[node name="Screw3" parent="Screws" index="2" instance=ExtResource("3_pfwi1")]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 322.0
+offset_right = 970.0
+offset_bottom = 362.0
+
+[node name="Screw4" parent="Screws" index="3" instance=ExtResource("3_pfwi1")]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 715.0
+offset_right = 970.0
+offset_bottom = 755.0
+
+[node name="SignCoder" parent="." index="4" instance=ExtResource("5_tvmd0")]
+visible = false
+layout_mode = 1

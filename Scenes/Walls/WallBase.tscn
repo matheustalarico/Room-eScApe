@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://kta32xxl83pv"]
+
+[ext_resource type="Texture2D" uid="uid://1c6w8n2837h8" path="res://Assets/wall.png" id="1_7m4td"]
+[ext_resource type="Script" uid="uid://dv6da26d5ur6n" path="res://Scenes/Walls/WallBase.gd" id="1_36i8o"]
+[ext_resource type="PackedScene" uid="uid://dlkk2hkysmf56" path="res://Scenes/Button/ArrowButton.tscn" id="3_dcr3t"]
+[ext_resource type="AudioStream" uid="uid://wgvrqq2rily8" path="res://Assets/Sounds/24.wav" id="4_36i8o"]
+[ext_resource type="LabelSettings" uid="uid://dib7xttt8jvt6" path="res://Resources/30black.tres" id="5_ijsot"]
+
+[node name="WallBase" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_36i8o")
+
+[node name="WallTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7m4td")
+
+[node name="ArrowLeft" parent="." instance=ExtResource("3_dcr3t")]
+layout_mode = 0
+offset_left = -175.00002
+offset_top = 231.99998
+offset_right = 325.0
+offset_bottom = 732.0
+
+[node name="ArrowRight" parent="." instance=ExtResource("3_dcr3t")]
+layout_mode = 0
+offset_left = 751.99994
+offset_top = 231.99998
+offset_right = 1252.0
+offset_bottom = 732.0
+rotation = 3.1415927
+
+[node name="Windows" type="Control" parent="."]
+z_index = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_36i8o")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 991.0
+offset_right = 239.0
+offset_bottom = 1068.0
+text = "Itens: "
+label_settings = ExtResource("5_ijsot")
+
+[connection signal="pressed" from="ArrowLeft" to="." method="_on_arrow_left_pressed"]
+[connection signal="pressed" from="ArrowRight" to="." method="_on_arrow_right_pressed"]

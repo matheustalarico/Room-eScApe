@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://qvaah8r6bheh"]
+
+[ext_resource type="FontFile" uid="uid://ddo2pvttx80wr" path="res://Assets/Fonts/Dunkin.otf" id="1_fg8np"]
+
+[resource]
+font = ExtResource("1_fg8np")
+font_size = 200
+font_color = Color(0, 0, 0, 1)

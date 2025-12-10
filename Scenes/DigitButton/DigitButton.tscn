@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7c58u1ls22os"]
+
+[ext_resource type="Script" uid="uid://c73485nvfohjn" path="res://Scenes/DigitButton/DigitButton.gd" id="1_mnl36"]
+[ext_resource type="LabelSettings" uid="uid://3wwuas2vl54n" path="res://Resources/50black.tres" id="1_vail8"]
+[ext_resource type="AudioStream" uid="uid://kg77g5avraav" path="res://Assets/Sounds/mouseclick.wav" id="3_dvn3k"]
+
+[node name="DigitButton" type="TextureButton"]
+offset_right = 60.0
+offset_bottom = 60.0
+mouse_default_cursor_shape = 2
+script = ExtResource("1_mnl36")
+
+[node name="Number" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -12.0
+offset_right = 54.0
+offset_bottom = 65.0
+text = "0"
+label_settings = ExtResource("1_vail8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dvn3k")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

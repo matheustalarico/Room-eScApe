@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=3 uid="uid://s701p8efm8p0"]
+
+[ext_resource type="PackedScene" uid="uid://kta32xxl83pv" path="res://Scenes/Walls/WallBase.tscn" id="1_5ic0t"]
+[ext_resource type="Script" uid="uid://cp4oy3ewhqraa" path="res://Scenes/Walls/Wall4/Wall4.gd" id="2_gteqa"]
+[ext_resource type="Texture2D" uid="uid://bwqlkajc14yle" path="res://Assets/wall_4/wall.png" id="3_gm2t5"]
+[ext_resource type="Texture2D" uid="uid://c5q24fr35j3x4" path="res://Assets/wall_4/tool_table.png" id="4_dnjut"]
+[ext_resource type="Texture2D" uid="uid://bvja5883ch5fc" path="res://Assets/wall_4/hammer_pickup.png" id="6_8qwci"]
+[ext_resource type="PackedScene" uid="uid://85vy1yi1jkfl" path="res://Scenes/InteractWindows/Wall4/HiddenTextWindow.tscn" id="7_gteqa"]
+[ext_resource type="Texture2D" uid="uid://cqdxuyjkbw0c3" path="res://Assets/wall_4/cup.png" id="7_y6aqo"]
+[ext_resource type="PackedScene" uid="uid://bfe1h4ypobj47" path="res://Scenes/InteractWindows/Wall4/BoardWindow.tscn" id="8_gm2t5"]
+
+[node name="Wall4" instance=ExtResource("1_5ic0t")]
+script = ExtResource("2_gteqa")
+wall_number = 4
+
+[node name="Board" type="TextureButton" parent="." index="3"]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 160.0
+offset_right = 735.0
+offset_bottom = 544.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_gm2t5")
+
+[node name="Table" type="TextureRect" parent="." index="4"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 594.0
+offset_right = 1001.0
+offset_bottom = 931.0
+texture = ExtResource("4_dnjut")
+
+[node name="Cup" type="TextureRect" parent="." index="5"]
+layout_mode = 0
+offset_left = 781.0
+offset_top = 511.0
+offset_right = 856.0
+offset_bottom = 594.0
+texture = ExtResource("7_y6aqo")
+
+[node name="Hammer" type="TextureButton" parent="." index="6"]
+layout_mode = 0
+offset_left = 775.0
+offset_top = 439.0
+offset_right = 864.0
+offset_bottom = 593.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_8qwci")
+
+[node name="HiddenText" type="TextureButton" parent="." index="7"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 869.0
+offset_right = 303.0
+offset_bottom = 953.0
+mouse_default_cursor_shape = 2
+
+[node name="HiddenTextWindow" parent="Windows" index="0" instance=ExtResource("7_gteqa")]
+visible = false
+layout_mode = 1
+
+[node name="BoardWindow" parent="Windows" index="1" instance=ExtResource("8_gm2t5")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="Board" to="." method="_on_board_pressed"]
+[connection signal="pressed" from="Hammer" to="." method="_on_hammer_pressed"]
+[connection signal="pressed" from="HiddenText" to="." method="_on_hidden_text_pressed"]

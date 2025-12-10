@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdvb0xlkwiyhk"]
+
+[ext_resource type="Script" uid="uid://ll2ma0xjksgd" path="res://Scenes/GameOverScreen/GameOverScreen.gd" id="1_2h0ik"]
+[ext_resource type="LabelSettings" uid="uid://c462g8slu6rlr" path="res://Resources/150white.tres" id="1_keid1"]
+[ext_resource type="FontFile" uid="uid://ddo2pvttx80wr" path="res://Assets/Fonts/Dunkin.otf" id="2_2h0ik"]
+[ext_resource type="AudioStream" uid="uid://bfm5o02gyh1w6" path="res://Assets/Sounds/Accept.mp3" id="4_pnnkp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pnnkp"]
+font = ExtResource("2_2h0ik")
+font_size = 80
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[node name="GameOverScreen" type="Control"]
+process_mode = 3
+z_index = 10
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_2h0ik")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13725491, 0.13725491, 0.13725491, 0.52156866)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -67.0
+offset_top = 187.0
+offset_right = 1193.0
+offset_bottom = 491.0
+text = "Parabéns!!"
+label_settings = ExtResource("1_keid1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = -88.0
+offset_top = 469.0
+offset_right = 1172.0
+offset_bottom = 773.0
+text = "Você completou
+o jogo!"
+label_settings = SubResource("LabelSettings_pnnkp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pnnkp")

@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dib7xttt8jvt6"]
+
+[ext_resource type="FontFile" uid="uid://ddo2pvttx80wr" path="res://Assets/Fonts/Dunkin.otf" id="1_rlurs"]
+
+[resource]
+line_spacing = 0.2
+font = ExtResource("1_rlurs")
+font_size = 30
+font_color = Color(0, 0, 0, 1)

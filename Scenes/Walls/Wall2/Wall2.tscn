@@ -1,0 +1,129 @@
+[gd_scene load_steps=10 format=3 uid="uid://dvnt4mgnhn04l"]
+
+[ext_resource type="PackedScene" uid="uid://kta32xxl83pv" path="res://Scenes/Walls/WallBase.tscn" id="1_03hcw"]
+[ext_resource type="PackedScene" uid="uid://de1ce3h8jbm6w" path="res://Scenes/InteractWindows/Wall2/PaintingWindow.tscn" id="2_6w2q8"]
+[ext_resource type="Script" uid="uid://cir3bvgl5ae0l" path="res://Scenes/Walls/Wall2/Wall2.gd" id="2_eg1oj"]
+[ext_resource type="PackedScene" uid="uid://bqvteyjtx36js" path="res://Scenes/Painting/Painting.tscn" id="2_fy0jr"]
+[ext_resource type="Texture2D" uid="uid://cqf1vmqlkcjxx" path="res://Assets/wall_2/digit_sign.png" id="3_6w2q8"]
+[ext_resource type="PackedScene" uid="uid://ct332solud0j6" path="res://Scenes/InteractWindows/Wall2/DeskWindow.tscn" id="4_6xey4"]
+[ext_resource type="PackedScene" uid="uid://b8gv52breqp2u" path="res://Scenes/Walls/Wall2/DeskGroup/DeskGroup.tscn" id="6_tjltd"]
+[ext_resource type="Texture2D" uid="uid://bc1yk8vgiqi6u" path="res://Assets/wall_2/hidden_opening.png" id="8_08sua"]
+[ext_resource type="PackedScene" uid="uid://k5uxbe43qrlg" path="res://Scenes/InteractWindows/Wall2/Painting4Window.tscn" id="8_hf1hf"]
+
+[node name="Wall2" instance=ExtResource("1_03hcw")]
+script = ExtResource("2_eg1oj")
+hidden_code = Array[int]([7, 4, 9])
+wall_number = 2
+
+[node name="Painting1" type="Control" parent="." index="3"]
+anchors_preset = 0
+offset_left = 118.0
+offset_top = 97.0
+offset_right = 158.0
+offset_bottom = 137.0
+
+[node name="Painting" parent="Painting1" index="0" instance=ExtResource("2_fy0jr")]
+layout_mode = 0
+is_a_button = true
+
+[node name="TextureRect" type="TextureRect" parent="Painting1" index="1"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 243.0
+offset_right = 158.0
+offset_bottom = 296.0
+texture = ExtResource("3_6w2q8")
+
+[node name="Painting2" type="Control" parent="." index="4"]
+anchors_preset = 0
+offset_left = 417.0
+offset_top = 97.0
+offset_right = 457.0
+offset_bottom = 137.0
+
+[node name="Painting" parent="Painting2" index="0" instance=ExtResource("2_fy0jr")]
+layout_mode = 0
+painting_type = 2
+is_a_button = true
+
+[node name="TextureRect" type="TextureRect" parent="Painting2" index="1"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 243.0
+offset_right = 158.0
+offset_bottom = 296.0
+texture = ExtResource("3_6w2q8")
+
+[node name="Painting3" type="Control" parent="." index="5"]
+anchors_preset = 0
+offset_left = 713.0
+offset_top = 97.0
+offset_right = 753.0
+offset_bottom = 137.0
+
+[node name="Painting" parent="Painting3" index="0" instance=ExtResource("2_fy0jr")]
+layout_mode = 0
+painting_type = 3
+is_a_button = true
+
+[node name="TextureRect" type="TextureRect" parent="Painting3" index="1"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 243.0
+offset_right = 158.0
+offset_bottom = 296.0
+texture = ExtResource("3_6w2q8")
+
+[node name="DeskGroup" parent="." index="6" instance=ExtResource("6_tjltd")]
+layout_mode = 1
+offset_left = 193.0
+offset_top = 497.0
+offset_right = 193.0
+offset_bottom = 497.0
+
+[node name="FourthPainting" type="TextureButton" parent="." index="7"]
+visible = false
+layout_mode = 0
+offset_left = 606.0
+offset_top = 440.0
+offset_right = 836.0
+offset_bottom = 900.0
+mouse_filter = 2
+texture_normal = ExtResource("8_08sua")
+flip_v = true
+
+[node name="ColorRect" type="ColorRect" parent="FourthPainting" index="0"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 85.0
+offset_right = 170.0
+offset_bottom = 136.0
+mouse_filter = 2
+
+[node name="Painting1" parent="Windows" index="0" instance=ExtResource("2_6w2q8")]
+visible = false
+layout_mode = 1
+target_digit = 7
+painting_type = 1
+
+[node name="Painting2" parent="Windows" index="1" instance=ExtResource("2_6w2q8")]
+visible = false
+layout_mode = 1
+target_digit = 4
+painting_type = 2
+
+[node name="Painting3" parent="Windows" index="2" instance=ExtResource("2_6w2q8")]
+visible = false
+layout_mode = 1
+target_digit = 9
+painting_type = 3
+
+[node name="DeskWindow" parent="Windows" index="3" instance=ExtResource("4_6xey4")]
+visible = false
+layout_mode = 1
+
+[node name="Painting4Window" parent="Windows" index="4" instance=ExtResource("8_hf1hf")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="FourthPainting" to="." method="_on_fourth_painting_pressed"]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqvteyjtx36js"]
+
+[ext_resource type="Script" uid="uid://ck25yrpd2yth2" path="res://Scenes/Painting/Painting.gd" id="1_71gi8"]
+[ext_resource type="Texture2D" uid="uid://n0tbr63bfqal" path="res://Assets/wall_2/painting_1.png" id="1_mkrvg"]
+
+[node name="Painting" type="TextureButton"]
+offset_right = 230.0
+offset_bottom = 230.0
+pivot_offset = Vector2(115, 115)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_mkrvg")
+script = ExtResource("1_71gi8")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

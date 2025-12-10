@@ -1,0 +1,177 @@
+[gd_scene load_steps=4 format=3 uid="uid://o45di6s0nofl"]
+
+[ext_resource type="Script" uid="uid://bfvve4wqmj4ti" path="res://Scenes/InteractWindows/Wall3/SafeWindowCode.gd" id="1_4xmln"]
+[ext_resource type="PackedScene" uid="uid://x7lagdhli0ro" path="res://Scenes/Number/Number.tscn" id="2_xuywd"]
+[ext_resource type="PackedScene" uid="uid://cklhlnkdkco34" path="res://Scenes/InteractWindows/Wall3/SafeDigitButton.tscn" id="4_w61kn"]
+
+[node name="SafeWindowCode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_4xmln")
+
+[node name="CodeScreen" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 312.0
+offset_right = 412.0
+offset_bottom = 396.0
+
+[node name="HBContainer" type="HBoxContainer" parent="CodeScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -38.5
+offset_right = 156.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Filler" type="Control" parent="CodeScreen/HBContainer"]
+layout_mode = 2
+
+[node name="0" parent="CodeScreen/HBContainer" instance=ExtResource("2_xuywd")]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+digit = 0
+
+[node name="Filler2" type="Control" parent="CodeScreen/HBContainer"]
+layout_mode = 2
+
+[node name="1" parent="CodeScreen/HBContainer" instance=ExtResource("2_xuywd")]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+digit = 1
+
+[node name="Filler3" type="Control" parent="CodeScreen/HBContainer"]
+layout_mode = 2
+
+[node name="2" parent="CodeScreen/HBContainer" instance=ExtResource("2_xuywd")]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+digit = 2
+
+[node name="Filler4" type="Control" parent="CodeScreen/HBContainer"]
+layout_mode = 2
+
+[node name="3" parent="CodeScreen/HBContainer" instance=ExtResource("2_xuywd")]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+digit = 3
+
+[node name="Filler5" type="Control" parent="CodeScreen/HBContainer"]
+layout_mode = 2
+
+[node name="4" parent="CodeScreen/HBContainer" instance=ExtResource("2_xuywd")]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+digit = 4
+
+[node name="Filler6" type="Control" parent="CodeScreen/HBContainer"]
+layout_mode = 2
+
+[node name="5" parent="CodeScreen/HBContainer" instance=ExtResource("2_xuywd")]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+digit = 5
+
+[node name="Filler7" type="Control" parent="CodeScreen/HBContainer"]
+layout_mode = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="Buttons" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1" parent="Buttons" instance=ExtResource("4_w61kn")]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 504.0
+offset_right = 193.0
+offset_bottom = 565.0
+n = 1
+
+[node name="2" parent="Buttons" instance=ExtResource("4_w61kn")]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 502.0
+offset_right = 285.0
+offset_bottom = 563.0
+n = 2
+
+[node name="3" parent="Buttons" instance=ExtResource("4_w61kn")]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 502.0
+offset_right = 375.0
+offset_bottom = 563.0
+n = 3
+
+[node name="4" parent="Buttons" instance=ExtResource("4_w61kn")]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 592.0
+offset_right = 193.0
+offset_bottom = 653.0
+n = 4
+
+[node name="5" parent="Buttons" instance=ExtResource("4_w61kn")]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 592.0
+offset_right = 284.0
+offset_bottom = 653.0
+n = 5
+
+[node name="6" parent="Buttons" instance=ExtResource("4_w61kn")]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 592.0
+offset_right = 375.0
+offset_bottom = 653.0
+n = 6
+
+[node name="7" parent="Buttons" instance=ExtResource("4_w61kn")]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 677.0
+offset_right = 195.0
+offset_bottom = 738.0
+n = 7
+
+[node name="8" parent="Buttons" instance=ExtResource("4_w61kn")]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 677.0
+offset_right = 285.0
+offset_bottom = 738.0
+n = 8
+
+[node name="9" parent="Buttons" instance=ExtResource("4_w61kn")]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 677.0
+offset_right = 375.0
+offset_bottom = 738.0
+n = 9
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

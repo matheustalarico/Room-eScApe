@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://x7lagdhli0ro"]
+
+[ext_resource type="LabelSettings" uid="uid://3wwuas2vl54n" path="res://Resources/50black.tres" id="1_wj6f0"]
+[ext_resource type="Script" uid="uid://difnf0erc03cu" path="res://Scenes/Number/Number.gd" id="2_qwaai"]
+
+[node name="Number" type="Label"]
+offset_right = 44.0
+offset_bottom = 77.0
+text = "0"
+label_settings = ExtResource("1_wj6f0")
+script = ExtResource("2_qwaai")

@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://bawmlhljl7bin"]
+
+[ext_resource type="PackedScene" uid="uid://dec123w1cgntr" path="res://Scenes/InteractWindows/InteractWindow.tscn" id="1_3hhgs"]
+[ext_resource type="Texture2D" uid="uid://leki4f2utpen" path="res://Assets/close_ups/storage_closed_close.png" id="2_dbw3d"]
+[ext_resource type="Script" uid="uid://6tqcmxrtqdbf" path="res://Scenes/InteractWindows/Wall3/StorageClosedWindow.gd" id="2_roya8"]
+[ext_resource type="PackedScene" uid="uid://dtyuqk6w41g1t" path="res://Scenes/InteractWindows/Wall3/StorageScrew.tscn" id="4_roya8"]
+
+[node name="StorageClosedWindow" instance=ExtResource("1_3hhgs")]
+script = ExtResource("2_roya8")
+
+[node name="TextureRect" parent="." index="0"]
+texture = ExtResource("2_dbw3d")
+
+[node name="ColorRect" type="ColorRect" parent="." index="2"]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 575.0
+offset_right = 278.0
+offset_bottom = 615.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." index="3"]
+layout_mode = 0
+offset_left = 809.0
+offset_top = 575.0
+offset_right = 849.0
+offset_bottom = 615.0
+color = Color(0, 0, 0, 1)
+
+[node name="StorageScrew" parent="." index="4" instance=ExtResource("4_roya8")]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 568.0
+offset_right = 270.0
+offset_bottom = 608.0
+scale = Vector2(1.44, 1.44)
+
+[node name="StorageScrew2" parent="." index="5" instance=ExtResource("4_roya8")]
+layout_mode = 0
+offset_left = 797.00006
+offset_top = 568.0
+offset_right = 838.00006
+offset_bottom = 608.0
+scale = Vector2(1.44, 1.44)

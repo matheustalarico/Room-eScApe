@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Escape Room"
+run/main_scene="uid://dd6xlpfn52yqv"
+config/features=PackedStringArray("4.5", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+SignalHub="*res://Globals/SignalHub.gd"
+GameManager="*res://Globals/GameManager.gd"
+SoundManager="*res://Globals/SoundManager.gd"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1080
+window/size/window_width_override=648
+window/size/window_height_override=648
+window/stretch/mode="canvas_items"
+
+[editor]
+
+naming/scene_name_casing=1
+naming/script_name_casing=1
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="mobile"

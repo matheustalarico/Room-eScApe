@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dd6xlpfn52yqv"]
+
+[ext_resource type="AudioStream" uid="uid://cpne6m7v6wyaf" path="res://Assets/Sounds/A Conversation with Saul (Rough Demo.mp3" id="1_h6g34"]
+[ext_resource type="Script" uid="uid://yyfvjrhcy2um" path="res://Scenes/Master/Master.gd" id="1_o4rt4"]
+[ext_resource type="PackedScene" uid="uid://v10bkajsfmfq" path="res://Scenes/Walls/Wall1/Wall1.tscn" id="3_tcv0n"]
+[ext_resource type="PackedScene" uid="uid://dvnt4mgnhn04l" path="res://Scenes/Walls/Wall2/Wall2.tscn" id="4_urij7"]
+[ext_resource type="PackedScene" uid="uid://c27sesggr3qxr" path="res://Scenes/Walls/Wall3/Wall3.tscn" id="5_4kcn7"]
+[ext_resource type="PackedScene" uid="uid://s701p8efm8p0" path="res://Scenes/Walls/Wall4/Wall4.tscn" id="6_sxu81"]
+
+[node name="Master" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o4rt4")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_h6g34")
+autoplay = true
+
+[node name="Wall1" parent="." instance=ExtResource("3_tcv0n")]
+layout_mode = 1
+
+[node name="Wall2" parent="." instance=ExtResource("4_urij7")]
+visible = false
+layout_mode = 1
+
+[node name="Wall3" parent="." instance=ExtResource("5_4kcn7")]
+visible = false
+layout_mode = 1
+
+[node name="Wall4" parent="." instance=ExtResource("6_sxu81")]
+visible = false
+layout_mode = 1

@@ -1,0 +1,159 @@
+[gd_scene load_steps=4 format=3 uid="uid://djfewppssc7bg"]
+
+[ext_resource type="PackedScene" uid="uid://dec123w1cgntr" path="res://Scenes/InteractWindows/InteractWindow.tscn" id="1_0mlq2"]
+[ext_resource type="Texture2D" uid="uid://5msl3yyvmh3v" path="res://Assets/close_ups/table_foot.png" id="2_7dk1t"]
+[ext_resource type="LabelSettings" uid="uid://3wwuas2vl54n" path="res://Resources/50black.tres" id="3_7dk1t"]
+
+[node name="TextWindow" instance=ExtResource("1_0mlq2")]
+
+[node name="TextureRect" parent="." index="0"]
+texture = ExtResource("2_7dk1t")
+
+[node name="ColorRect" type="ColorRect" parent="." index="1"]
+layout_mode = 0
+offset_right = 375.0
+offset_bottom = 861.0
+
+[node name="Letters1" type="VBoxContainer" parent="." index="3"]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 15.0
+offset_right = 443.0
+offset_bottom = 1064.0
+
+[node name="Label" type="Label" parent="Letters1" index="0"]
+layout_mode = 2
+text = "A - 01"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label2" type="Label" parent="Letters1" index="1"]
+layout_mode = 2
+text = "B - 02"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label3" type="Label" parent="Letters1" index="2"]
+layout_mode = 2
+text = "C - 03"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label4" type="Label" parent="Letters1" index="3"]
+layout_mode = 2
+text = "D - 04"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label5" type="Label" parent="Letters1" index="4"]
+layout_mode = 2
+text = "E - 05"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label6" type="Label" parent="Letters1" index="5"]
+layout_mode = 2
+text = "F - 06"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label7" type="Label" parent="Letters1" index="6"]
+layout_mode = 2
+text = "G - 07"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label8" type="Label" parent="Letters1" index="7"]
+layout_mode = 2
+text = "H - 08"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label9" type="Label" parent="Letters1" index="8"]
+layout_mode = 2
+text = "I - 09"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label10" type="Label" parent="Letters1" index="9"]
+layout_mode = 2
+text = "J - 10"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label11" type="Label" parent="Letters1" index="10"]
+layout_mode = 2
+text = "K - 11"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label12" type="Label" parent="Letters1" index="11"]
+layout_mode = 2
+text = "L - 12"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label13" type="Label" parent="Letters1" index="12"]
+layout_mode = 2
+text = "M - 13"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Letters2" type="VBoxContainer" parent="." index="4"]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 15.0
+offset_right = 1023.0
+offset_bottom = 1064.0
+
+[node name="Label" type="Label" parent="Letters2" index="0"]
+layout_mode = 2
+text = "N - 14"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label2" type="Label" parent="Letters2" index="1"]
+layout_mode = 2
+text = "O - 15"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label3" type="Label" parent="Letters2" index="2"]
+layout_mode = 2
+text = "P - 16"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label4" type="Label" parent="Letters2" index="3"]
+layout_mode = 2
+text = "Q - 17"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label5" type="Label" parent="Letters2" index="4"]
+layout_mode = 2
+text = "R - 18"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label6" type="Label" parent="Letters2" index="5"]
+layout_mode = 2
+text = "S - 19"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label7" type="Label" parent="Letters2" index="6"]
+layout_mode = 2
+text = "T - 20"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label8" type="Label" parent="Letters2" index="7"]
+layout_mode = 2
+text = "U - 21"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label9" type="Label" parent="Letters2" index="8"]
+layout_mode = 2
+text = "V - 22"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label10" type="Label" parent="Letters2" index="9"]
+layout_mode = 2
+text = "W - 23"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label11" type="Label" parent="Letters2" index="10"]
+layout_mode = 2
+text = "X - 24"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label12" type="Label" parent="Letters2" index="11"]
+layout_mode = 2
+text = "Y - 25"
+label_settings = ExtResource("3_7dk1t")
+
+[node name="Label13" type="Label" parent="Letters2" index="12"]
+layout_mode = 2
+text = "Z - 26"
+label_settings = ExtResource("3_7dk1t")

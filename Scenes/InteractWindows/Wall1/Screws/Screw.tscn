@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvtmdqr8iqr7u"]
+
+[ext_resource type="Texture2D" uid="uid://dblgah4ur4dml" path="res://Assets/close_ups/sign_1_screw.png" id="1_iisbq"]
+[ext_resource type="Script" uid="uid://c642x7vtjb60m" path="res://Scenes/InteractWindows/Wall1/Screws/Screw.gd" id="2_nt7qv"]
+[ext_resource type="AudioStream" uid="uid://kg77g5avraav" path="res://Assets/Sounds/mouseclick.wav" id="3_gmhqn"]
+
+[node name="Screw" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_iisbq")
+script = ExtResource("2_nt7qv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gmhqn")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

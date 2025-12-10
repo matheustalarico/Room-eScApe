@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlkk2hkysmf56"]
+
+[ext_resource type="Script" uid="uid://c2jelmk7st4t2" path="res://Scenes/Button/ArrowButton.gd" id="1_2o1ur"]
+[ext_resource type="Texture2D" uid="uid://w1w6j110h3vl" path="res://Assets/arrow.png" id="1_yn0r7"]
+[ext_resource type="AudioStream" uid="uid://kg77g5avraav" path="res://Assets/Sounds/mouseclick.wav" id="2_kb5px"]
+[ext_resource type="Texture2D" uid="uid://ctva057td802j" path="res://Assets/arrow_pressed.png" id="2_nmf25"]
+
+[node name="ArrowButton" type="TextureButton"]
+z_index = 1
+offset_left = -250.00002
+offset_top = -250.00002
+offset_right = 249.99998
+offset_bottom = 249.99998
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(250, 250)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_yn0r7")
+texture_pressed = ExtResource("2_nmf25")
+script = ExtResource("1_2o1ur")
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_kb5px")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

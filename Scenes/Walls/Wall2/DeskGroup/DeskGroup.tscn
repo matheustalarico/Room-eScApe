@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8gv52breqp2u"]
+
+[ext_resource type="Script" uid="uid://c2q84c0udxi7k" path="res://Scenes/Walls/Wall2/DeskGroup/DeskGroup.gd" id="1_3ny86"]
+[ext_resource type="Texture2D" uid="uid://7f28mh8omuon" path="res://Assets/wall_2/desk.png" id="2_gcqwu"]
+[ext_resource type="Texture2D" uid="uid://d13bgooa14sdh" path="res://Assets/wall_2/calendar.png" id="3_skbir"]
+
+[node name="DeskGroup" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3ny86")
+
+[node name="Desk" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 139.0
+offset_right = 313.0
+offset_bottom = 434.0
+texture = ExtResource("2_gcqwu")
+
+[node name="DeskTrigger" type="TextureButton" parent="Desk"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 159.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+
+[node name="Calendar" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_right = 110.0
+offset_bottom = 40.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_skbir")
+
+[connection signal="pressed" from="Desk/DeskTrigger" to="." method="on_triggers_pressed"]
+[connection signal="pressed" from="Calendar" to="." method="on_triggers_pressed"]

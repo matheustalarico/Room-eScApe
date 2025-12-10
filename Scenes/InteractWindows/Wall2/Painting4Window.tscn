@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://k5uxbe43qrlg"]
+
+[ext_resource type="PackedScene" uid="uid://dec123w1cgntr" path="res://Scenes/InteractWindows/InteractWindow.tscn" id="1_y06p0"]
+[ext_resource type="Script" uid="uid://xp3bwqsulcno" path="res://Scenes/InteractWindows/Wall2/Painting4Window.gd" id="2_bo1a5"]
+[ext_resource type="Texture2D" uid="uid://cd6ppkek7mwqq" path="res://Assets/close_ups/paitning_4_close.png" id="2_i56kn"]
+[ext_resource type="Texture2D" uid="uid://hepsb58kmda6" path="res://Assets/wall_2/screwdriver_new.png" id="3_i56kn"]
+
+[node name="Painting4Window" instance=ExtResource("1_y06p0")]
+script = ExtResource("2_bo1a5")
+
+[node name="TextureRect" parent="." index="0"]
+texture = ExtResource("2_i56kn")
+
+[node name="ColorRect" type="ColorRect" parent="." index="2"]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 358.0
+offset_right = 936.0
+offset_bottom = 742.0
+
+[node name="Screwdriver" type="TextureButton" parent="." index="3"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 447.0
+offset_right = 450.0
+offset_bottom = 517.0
+scale = Vector2(3, 3)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_i56kn")
+
+[connection signal="pressed" from="Screwdriver" to="." method="_on_screwdriver_pressed"]

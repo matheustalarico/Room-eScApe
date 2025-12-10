@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://de1ce3h8jbm6w"]
+
+[ext_resource type="PackedScene" uid="uid://dec123w1cgntr" path="res://Scenes/InteractWindows/InteractWindow.tscn" id="1_1e7ig"]
+[ext_resource type="Script" uid="uid://brjsr5qtdltbm" path="res://Scenes/InteractWindows/Wall2/PaintingWindow.gd" id="2_80r4r"]
+[ext_resource type="LabelSettings" uid="uid://3wwuas2vl54n" path="res://Resources/50black.tres" id="3_80r4r"]
+[ext_resource type="PackedScene" uid="uid://bqvteyjtx36js" path="res://Scenes/Painting/Painting.tscn" id="5_3hcu3"]
+[ext_resource type="PackedScene" uid="uid://dyajjk3nfvsni" path="res://Scenes/InteractWindows/Wall2/PaintingInput.tscn" id="5_q303q"]
+
+[node name="PaintingWindow" instance=ExtResource("1_1e7ig")]
+script = ExtResource("2_80r4r")
+target_digit = -1
+painting_type = 0
+
+[node name="ColorRect" type="ColorRect" parent="." index="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="." index="3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -174.0
+offset_top = 223.0
+offset_right = 175.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "R. L. Rivest"
+label_settings = ExtResource("3_80r4r")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PaintingInput" parent="." index="4" instance=ExtResource("5_q303q")]
+layout_mode = 1
+
+[node name="Painting" parent="." index="5" instance=ExtResource("5_3hcu3")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -278.0
+offset_right = 115.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)

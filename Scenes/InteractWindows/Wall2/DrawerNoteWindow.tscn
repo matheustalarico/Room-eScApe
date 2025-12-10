@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://kyqu8oefjbhd"]
+
+[ext_resource type="PackedScene" uid="uid://dec123w1cgntr" path="res://Scenes/InteractWindows/InteractWindow.tscn" id="1_5ihbr"]
+[ext_resource type="Texture2D" uid="uid://djedwg62vw6vx" path="res://Assets/close_ups/drawer_note.png" id="2_0mpa7"]
+[ext_resource type="FontFile" uid="uid://ddo2pvttx80wr" path="res://Assets/Fonts/Dunkin.otf" id="3_e6kmv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i2cn3"]
+font = ExtResource("3_e6kmv")
+font_size = 150
+font_color = Color(0, 0, 0, 1)
+
+[node name="DrawerNoteWindow" instance=ExtResource("1_5ihbr")]
+
+[node name="ColorRect" type="ColorRect" parent="." index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.18431373, 0.18431373, 0.18431373, 0.5137255)
+
+[node name="TextureRect" parent="." index="1"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -392.0
+offset_top = -274.5
+offset_right = 392.0
+offset_bottom = 274.5
+texture = ExtResource("2_0mpa7")
+
+[node name="ArrowButton" parent="." index="2"]
+offset_left = -135.00002
+offset_top = -43.999985
+offset_right = 365.0
+offset_bottom = 456.00006
+
+[node name="Label8" type="Label" parent="." index="3"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 408.0
+offset_right = 1031.0
+offset_bottom = 712.0
+text = "n = 33"
+label_settings = SubResource("LabelSettings_i2cn3")

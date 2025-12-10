@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://djtuoj7l6mmmb"]
+
+[ext_resource type="PackedScene" uid="uid://dec123w1cgntr" path="res://Scenes/InteractWindows/InteractWindow.tscn" id="1_vmqie"]
+[ext_resource type="Texture2D" uid="uid://cru360atxw4hq" path="res://Assets/close_ups/safe_note_close.png" id="2_3870c"]
+[ext_resource type="LabelSettings" uid="uid://qvaah8r6bheh" path="res://Resources/200black.tres" id="3_3870c"]
+
+[node name="SafeInsideWindow" instance=ExtResource("1_vmqie")]
+
+[node name="TextureRect" parent="." index="0"]
+texture = ExtResource("2_3870c")
+
+[node name="ArrowButton" parent="." index="1"]
+offset_left = -136.00002
+offset_top = 2.9999843
+offset_right = 364.0
+offset_bottom = 502.99997
+
+[node name="Label" type="Label" parent="." index="2"]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 404.0
+offset_right = 873.0
+offset_bottom = 708.0
+text = "d = 3"
+label_settings = ExtResource("3_3870c")

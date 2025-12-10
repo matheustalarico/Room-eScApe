@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://co2rorg5sh02o"]
+
+[ext_resource type="Script" uid="uid://uxs5n8d45akv" path="res://Scenes/WallLabel/WallLabel.gd" id="1_jrsmf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7thdr"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[node name="WallLabel" type="Label"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -65.0
+offset_top = -103.0
+offset_right = 66.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+text = "Wall: "
+label_settings = SubResource("LabelSettings_7thdr")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_jrsmf")
